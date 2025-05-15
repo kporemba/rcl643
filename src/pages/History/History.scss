@@ -1,0 +1,62 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.history {
+  margin-top: 5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: $blue;
+    @include title;
+  }
+
+  &__text {
+    padding-bottom: 1rem;
+    @include text;
+  }
+
+  &__subtitle {
+    display: flex;
+    justify-content: center;
+    @include subtitle;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  &__img {
+    height: 20rem;
+  }
+
+  &__button {
+    background-color: $blue;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: transparent;
+    color: white;
+  }
+  &__button:hover {
+    background-color: $red;
+    cursor: pointer;
+  }
+}

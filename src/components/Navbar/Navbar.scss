@@ -1,0 +1,125 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
+  display: flex;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  height: 4rem;
+  background-color: white;
+  border-bottom: 3px solid $blue;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+  @include desktop {
+    justify-content: flex-start;
+  }
+
+  &__logo {
+    display: flex;
+    height: 4rem;
+    padding-right: 3rem;
+  }
+}
+
+.hamburgerContainer {
+  display: flex;
+  &__menu {
+    display: flex;
+    padding-right: 0.5rem 1rem;
+    height: 2.5rem;
+    fill: $red;
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  &__button {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.navbarContainerMobile {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.navbarContainer {
+  display: none;
+  @include tablet {
+    color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    flex-direction: row;
+
+    &__menu {
+      display: none;
+    }
+
+    &__button {
+      display: flex;
+      background-color: transparent;
+      text-decoration: none;
+      color: $black;
+      border: 1px solid transparent;
+      font-size: 0.85rem;
+      width: 100%;
+      @include fontRegular;
+      padding: 1rem;
+    }
+    &__button:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: $blue;
+    }
+  }
+  @include desktop {
+    color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    flex-direction: row;
+
+    &__menu {
+      display: none;
+    }
+
+    &__button {
+      display: flex;
+      background-color: transparent;
+      color: $black;
+      border: 1px solid transparent;
+      font-size: 1rem;
+      width: 100%;
+      @include fontRegular;
+      padding: 1rem;
+    }
+    &__button:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      color: $blue;
+    }
+  }
+}

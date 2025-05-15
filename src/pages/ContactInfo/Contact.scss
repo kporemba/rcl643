@@ -1,0 +1,83 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.contact {
+  padding: 1rem;
+  position: relative;
+  top: 5.5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    color: $blue;
+    @include title;
+  }
+  &__subtitle {
+    @include subtitle;
+  }
+
+  &__hoursImg {
+    display: flex;
+    border: 3px solid $red;
+    width: 75%;
+    align-items: center;
+
+    @include tablet {
+      width: 15rem;
+    }
+    @include desktop {
+      width: 15rem;
+    }
+  }
+
+  &__link {
+    color: $black;
+  }
+  &__link:hover {
+    color: $red;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    @include tablet {
+      flex-direction: row;
+    }
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__veteranAffairs {
+    width: 100%;
+    @include tablet {
+      width: 70%;
+      padding: 0 1rem;
+    }
+    @include desktop {
+      width: 70%;
+    }
+  }
+  &__vetImg {
+    width: 100%;
+    @include tablet {
+      width: 75%;
+    }
+    @include desktop {
+      width: 60%;
+    }
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include tablet {
+      width: 30%;
+      padding: 1rem;
+    }
+    @include desktop {
+      width: 30%;
+    }
+  }
+}

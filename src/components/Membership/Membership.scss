@@ -1,0 +1,66 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.membership {
+  display: flex;
+  margin-bottom: 2rem;
+  border: 0.25rem solid $red;
+  color: $black;
+  border-radius: 1rem;
+  padding: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    // border: 0.5rem solid $red;
+  }
+  @include desktop {
+    flex-direction: row;
+    // border: 0.5rem solid $red;
+  }
+
+  &__subtitle {
+    @include subtitle;
+  }
+  &__text {
+    @include text;
+  }
+
+  &__logo {
+    display: flex;
+    height: 5rem;
+
+    @include tablet {
+      height: 5rem;
+    }
+    @include desktop {
+      height: 7rem;
+    }
+  }
+
+  &__groupImg {
+    display: flex;
+    flex-direction: column;
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__link {
+    color: $black;
+  }
+  &__link:hover {
+    color: $red;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.event {
+  display: flex;
+  flex-direction: column;
+  &__subtitle {
+    @include subtitle;
+  }
+
+  &__text {
+    @include text;
+  }
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+    text-wrap: wrap;
+    width: min-content;
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__img {
+    width: 20rem;
+    object-fit: cover;
+  }
+}

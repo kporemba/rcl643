@@ -1,0 +1,77 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.cadets {
+  margin-top: 5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: $blue;
+    @include title;
+  }
+
+  &__text {
+    @include text;
+    &--special {
+      font-weight: 500;
+      font-style: italic;
+    }
+  }
+
+  &__subheading {
+    color: white;
+    background-color: $blue;
+    padding: 1rem;
+    border-radius: 1rem;
+    @include subtitle;
+  }
+
+  &__subtitle {
+    @include subtitle;
+  }
+
+  &__link {
+    color: $blue;
+    text-decoration: none;
+  }
+
+  &__mainLogo {
+    padding: 1rem;
+  }
+
+  &__logo {
+    width: 10rem;
+  }
+
+  &__groupWrapper {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    @include desktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__group {
+    display: flex;
+
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 10px solid $blue;
+    border-radius: 1rem;
+    @include tablet {
+      margin: 1rem;
+      width: 45%;
+    }
+    @include desktop {
+      margin: 1rem;
+      width: 47%;
+    }
+  }
+}

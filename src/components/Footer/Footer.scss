@@ -1,0 +1,50 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  margin-bottom: 0;
+  background-color: $blue;
+  color: white;
+  padding: 1rem;
+  line-height: 1;
+  bottom: 0;
+  height: 100%;
+
+  &__subtitle {
+    text-decoration: underline $red;
+    text-decoration-thickness: 4px;
+    @include subtitle;
+  }
+
+  &__link {
+    color: white;
+  }
+  &__link:hover {
+    color: $red;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+      flex-direction: row;
+    }
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include tablet {
+      width: 30%;
+      padding: 1rem;
+      text-wrap: wrap;
+    }
+    @include desktop {
+      width: 30%;
+    }
+  }
+}

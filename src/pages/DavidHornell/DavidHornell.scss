@@ -1,0 +1,139 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.history {
+  margin-top: 5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: $blue;
+    @include title;
+  }
+
+  &__subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    @include subtitle;
+    justify-content: left;
+  }
+  &__textArticle {
+    @include text;
+    justify-content: left;
+  }
+  &__image {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    height: 75%;
+    margin: 1rem;
+
+    @include tablet {
+      width: 40%;
+    }
+    @include desktop {
+      width: 30%;
+    }
+  }
+  &__textGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include tablet {
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    @include desktop {
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  &__textDesktop {
+    display: flex;
+    height: fit-content;
+    margin: 0;
+    margin-bottom: 1rem;
+    @include text;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      width: 60%;
+      @include text;
+    }
+
+    &--citation {
+      margin: 0;
+      margin-bottom: 1rem;
+      @include text;
+    }
+  }
+  &__textTablet {
+    display: none;
+
+    @include tablet {
+      width: 50%;
+      display: flex;
+      height: fit-content;
+      margin: 0;
+      @include text;
+    }
+
+    @include desktop {
+      display: none;
+    }
+
+    &--citation {
+      display: none;
+
+      @include tablet {
+        display: block;
+        margin: 0;
+        margin-bottom: 1rem;
+        @include text;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    display: none;
+    @include text;
+    @include tablet {
+      width: 50%;
+      display: flex;
+      height: fit-content;
+      margin: 0;
+    }
+
+    @include desktop {
+      display: none;
+    }
+
+    &--citation {
+      margin: 0;
+      margin-bottom: 1rem;
+      @include text;
+      @include tablet {
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+
+      @include desktop {
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &__article {
+    width: 100%;
+  }
+}
