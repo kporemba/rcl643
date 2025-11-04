@@ -1,10 +1,16 @@
 import "../Homepage/Homepage.scss";
 import header from "../../assets/images/header.jpg";
 import hours from "../../assets/images/hours.jpg";
-import event from "/public/assets/events/mayPoster.jpg";
 import Membership from "../../components/Membership/Membership";
+import { sortEvents } from "../Events/utils.js";
+import { getImageURL } from "../../data/utils.js";
+import { NavLink } from "react-router";
 
 function Homepage() {
+  const { currentEvents, pastEvents } = sortEvents();
+  const displayEvent = getImageURL(
+    currentEvents.length ? currentEvents[0] : pastEvents[0]
+  );
   return (
     <div className="homepage">
       <div className="headerContainer">
@@ -15,29 +21,47 @@ function Homepage() {
       </div>
 
       <div className="homepage__introGroup">
-        <div className="homepage__hoursGroup ">
+        <div className="homepage__hoursGroup">
           <h2 className="homepage__subtitle">Hours of Operation</h2>
           <img src={hours} className="homepage__hours"></img>
         </div>
-        <div className="homepage__eventsGroup ">
-          <h2 className="homepage__subtitle">Upcoming Events</h2>
-          {/* <img src={generalMeeting} className="homepage__eventImg" /> */}
-          <img src={event} className="homepage__eventImg" />
-        </div>
+        <NavLink className="homepage__eventsGroup" to={"/events"}>
+          <h2 className="homepage__subtitle">
+            {currentEvents.length ? "Upcoming Events" : "Past Events"}
+          </h2>
+          <img src={displayEvent} className="homepage__eventImg" />
+        </NavLink>
         <div className="homepage__rightGroup">
           <div className="homepage__contactGroup homepage__contactGroup--style">
-            <h2 className="homepage__subtitle">Contact Us</h2>
+            <NavLink to="/contact">
+              <h2 className="homepage__subtitle">Contact Us</h2>
+            </NavLink>
             <p className="homepage__text">
-              <strong>Clubroom:</strong> 416-259-0285
+              <strong>Clubroom: </strong>
+              <a href="tel:416-259-0285" className="contact__link">
+                416-259-0285
+              </a>
             </p>
             <p className="homepage__text">
-              <strong>Office:</strong> 416-231-2021
+              <strong>Office: </strong>
+              <a href="tel:416-231-2021" className="contact__link">
+                416-231-2021
+              </a>
             </p>
             <p className="homepage__text">
-              <strong>Address:</strong> 110 Jutland Road, Toronto ON, M8Z 2H1
+              <strong>Address: </strong>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Flight+Lieutenant+David+Hornell+V+C"
+                className="contact__link"
+              >
+                110 Jutland Road, Toronto ON, M8Z 2H1
+              </a>
             </p>
             <p className="homepage__text">
-              <strong>Email:</strong> rcbranch643@gmail.com
+              <strong>Email: </strong>
+              <a href="mailto:rcbranch643@gmail.com" className="contact__link">
+                rcbranch643@gmail.com
+              </a>
             </p>
             <p className="homepage__text">
               <strong>Facebook: </strong>

@@ -6,8 +6,10 @@
     src: url(../../assets/fonts/Sense_Black.otf) format("opentype");
   }
 
-  font-weight: 400;
-  font-family: Avenir, Arial, Helvetica, sans-serif;
+  & {
+    font-weight: 400;
+    font-family: Avenir, Arial, Helvetica, sans-serif;
+  }
 }
 
 @mixin fontDemi {
@@ -16,8 +18,10 @@
     src: url(../../assets/fonts/Sense_Black.otf) format("opentype");
   }
 
-  font-weight: 600;
-  font-family: Avenir, Arial, Helvetica, sans-serif;
+  & {
+    font-weight: 600;
+    font-family: Avenir, Arial, Helvetica, sans-serif;
+  }
 }
 
 @mixin fontBold {
@@ -26,8 +30,10 @@
     src: url(../../assets/fonts/Sense_Black.otf) format("opentype");
   }
 
-  font-weight: 700;
-  font-family: Avenir, Arial, Helvetica, sans-serif;
+  & {
+    font-weight: 700;
+    font-family: Avenir, Arial, Helvetica, sans-serif;
+  }
 }
 
 //breakpoints of different screensizes
@@ -44,8 +50,11 @@
 }
 @mixin title {
   @include fontBold;
-  font-size: 1.5rem;
-  line-height: 2rem;
+
+  & {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 
   @include tablet {
     @include fontBold;
@@ -61,8 +70,11 @@
 }
 @mixin subtitle {
   @include fontDemi;
-  font-size: 1rem;
-  line-height: 1.425rem;
+
+  & {
+    font-size: 1rem;
+    line-height: 1.425rem;
+  }
 
   @include tablet {
     font-size: 1.25rem;
@@ -77,8 +89,10 @@
 
 @mixin text {
   @include fontRegular;
-  font-size: 0.813rem;
-  line-height: 1.125rem;
+  & {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+  }
 
   @include tablet {
     font-size: 0.875rem;

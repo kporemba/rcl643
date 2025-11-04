@@ -1,0 +1,54 @@
+{
+  "events": [
+    {
+      "title": "Friday Night Karaoke",
+      "description": "Come out and enjoy a fun night of Karaoke at Royal Canadian Legion Branch #643, 110 Jutland Road, Etobicoke. Fridays 7pm to 11pm. October 03, 10, 17, 24, and 31 and November 07, 14, 21, and 28. Enjoy dinner before the show - kitchen open 1pm to 7pm.",
+      "imageId": "karaoke",
+      "endDate": "11-28-2025"
+    },
+    {
+      "title": "Labour Day Celebration",
+      "description": "Free entertainment featuring DJ Bruce Graham from 1:00pm - 5:00pm. BBQ Hamburgers, Hot Dogs, and Sausages available for purchase between 1:00pm-3:30pm. Doors open at 12:30pm.",
+      "imageId": "labour-day",
+      "endDate": "10-28-2025"
+    },
+    {
+      "title": "D-Day Memorial",
+      "description": "D-Day and the Battle of Normandy Annual Parade and Memorial Service Sunday June 1, 2025.",
+      "imageId": "dDay",
+      "endDate": "10-28-2025"
+    },
+    {
+      "title": "May Dinner and Dance",
+      "description": "Tickets are 25$, available at the Clubroom Bar.",
+      "imageId": "mayPoster",
+      "endDate": "10-28-2025"
+    },
+    {
+      "title": "Food Drive",
+      "description": "April 1st - May 13th",
+      "imageId": "foodDrive",
+      "endDate": "5-13-2025"
+    },
+    {
+      "title": "General Meeting",
+      "description": "Come out and support your branch.",
+      "imageId": "general-meeting",
+      "endDate": "5-13-2025"
+    },
+    {
+      "title": "King Charlges III Coronation Medal Ceremony",
+      "description": "Congratulations to Branch President Donna Sampson and Branch First Vice President William Law on being presented with the King Charles III Coronation medal by MP James Maloney before a full house at Branch 643 on March 4th.",
+      "imageId": "coronation/8",
+      "photoCta": "/event/1",
+      "endDate": "5-13-2025"
+    },
+    {
+      "title": "Remembrance Day 2024",
+      "description": "Branch 643 welcomed members from the public and local elementary students to our 2024 Remembrance Day service.",
+      "imageId": "remembrance/1",
+      "photoCta": "/event/2",
+      "endDate": "5-13-2025"
+    }
+  ]
+}

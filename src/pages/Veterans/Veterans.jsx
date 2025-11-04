@@ -1,11 +1,23 @@
 import "../Veterans/Veterans.scss";
-import * as React from "react";
+import React, { useState, useCallback } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import data from "../../data/data.json";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import ExpandableImage from "../../components/ExpandableImage/ExpandableImage";
 
 function Veterans() {
+  const isMobile = !useMediaQuery("(min-width:768px)");
   const itemData = data.find((item) => item.id === "3");
+  const [activeIndex, setActiveIndex] = useState(null);
+  const arrLength = itemData.images.length;
+  const next = useCallback(() => {
+    setActiveIndex((activeIndex + 1) % arrLength);
+  }, [activeIndex, arrLength]);
+  const prev = useCallback(() => {
+    setActiveIndex(activeIndex >= 1 ? activeIndex - 1 : arrLength - 1);
+  }, [activeIndex, arrLength]);
+
   if (!itemData) return null;
   return (
     <div className="veterans">
@@ -31,25 +43,25 @@ function Veterans() {
         <a href="mailto:w.j.lawerogers.com"> w.j.lawerogers.com</a>
       </p>
 
-      <div className="veterans__galleryMobile">
-        <ImageList className="veterans__gallery" cols={1} rowHeight={"auto"}>
-          {itemData.images.map((item) => (
-            <ImageListItem key={item.img}>
-              <img src={item.img} alt={item.title} loading="lazy" />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </div>
-
-      <div className="veterans__galleryTablet">
-        <ImageList className="veterans__gallery" cols={3} rowHeight={"auto"}>
-          {itemData.images.map((item) => (
-            <ImageListItem key={item.img}>
-              <img src={item.img} alt={item.title} loading="lazy" />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </div>
+      <ImageList
+        className="veterans__gallery"
+        cols={isMobile ? 1 : 3}
+        rowHeight={"auto"}
+      >
+        {itemData.images.map((item, index) => (
+          <ImageListItem key={item.img}>
+            <ExpandableImage
+              src={item.img}
+              alt={item.title}
+              globalOpen={activeIndex !== null ? index === activeIndex : null}
+              onOpen={() => setActiveIndex(index)}
+              next={next}
+              prev={prev}
+              fullWidth
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
     </div>
   );
 }

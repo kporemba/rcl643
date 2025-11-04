@@ -1,7 +1,7 @@
 import "../ContactInfo/Contact.scss";
 import hours from "../../assets/images/hours.jpg";
 import Membership from "../../components/Membership/Membership";
-import vet from "../../../public/assets/veterans/5.jpg";
+import vet from "/assets/veterans/5.jpg";
 
 function Contact() {
   return (

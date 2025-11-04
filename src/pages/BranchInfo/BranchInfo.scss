@@ -24,30 +24,6 @@
     width: 100%;
   }
 
-  &__galleryMobile {
-    display: block;
-  }
-  &__galleryTablet {
-    display: none;
-  }
-
-  @include tablet {
-    &__galleryMobile {
-      display: none;
-    }
-    &__galleryTablet {
-      display: block;
-    }
-  }
-  @include desktop {
-    &__galleryMobile {
-      display: none;
-    }
-    &__galleryTablet {
-      display: block;
-    }
-  }
-
   &__positions {
     padding-bottom: 2rem;
     width: 100%;

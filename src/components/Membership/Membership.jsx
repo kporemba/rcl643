@@ -15,7 +15,10 @@ function Membership() {
           <a href={membership} target="_blank" className="membership__link">
             Membership Form
           </a>
-          . Please email it to rcbranch643@gmail.com.
+          {". Please email it to "}
+          <a href="mailto:rcbranch643@gmail.com" className="membership__link">
+            rcbranch643@gmail.com
+          </a>
         </p>
       </div>
     </div>

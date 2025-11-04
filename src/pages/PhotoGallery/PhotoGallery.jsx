@@ -1,7 +1,7 @@
 import "../PhotoGallery/PhotoGallery.scss";
 import { NavLink } from "react-router";
-import cenotaph from "/public/assets/events/cenotaph/01.jpg";
-import remembrance from "/public/assets/events/remembrance/1.jpg";
+import cenotaph from "/assets/events/cenotaph/01.jpg";
+import remembrance from "/assets/events/remembrance/1.jpg";
 
 function PhotoGallery() {
   return (
@@ -10,14 +10,18 @@ function PhotoGallery() {
 
       <div className="gallery__group">
         <div className="gallery__profile">
-          <img src={cenotaph} className="gallery__img" />
+          <NavLink to="/event/5" className="link">
+            <img src={cenotaph} className="gallery__img" />
+          </NavLink>
           <h3 className="gallery__subtitle">Cenotaph Relocation</h3>
           <NavLink to="/event/5" className="link">
             <button className="gallery__button">See More</button>
           </NavLink>
         </div>
         <div className="gallery__profile">
-          <img src={remembrance} className="gallery__img" />
+          <NavLink to="/event/2" className="link">
+            <img src={remembrance} className="gallery__img" />
+          </NavLink>
           <h3 className="gallery__subtitle">Remembrance Day</h3>
           <NavLink to="/event/2" className="link">
             <button className="gallery__button">See More</button>

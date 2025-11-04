@@ -1,0 +1,49 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.branch {
+  margin-top: 5rem;
+  padding: 1rem;
+
+  &__title {
+    color: $blue;
+    @include title;
+  }
+
+  &__text {
+    @include text;
+    display: flex;
+    &--poem {
+      font-style: italic;
+    }
+    &--bonner {
+      color: $red;
+      @include fontDemi;
+      min-width: 4rem;
+    }
+    &--james {
+      color: $blue;
+      @include fontDemi;
+      min-width: 4rem;
+    }
+    &--gormell {
+      color: $brown;
+      @include fontDemi;
+      min-width: 4rem;
+    }
+  }
+
+  &__subtitle {
+    @include subtitle;
+    &--special {
+      color: $blue;
+    }
+  }
+}
+
+.quote {
+  &__group {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

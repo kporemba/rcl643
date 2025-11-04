@@ -1,0 +1,44 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.bHistory {
+  margin-top: 5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: $blue;
+    @include title;
+  }
+
+  &__subtitle {
+    @include subtitle;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 15rem;
+    height: 15rem;
+  }
+
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+}
