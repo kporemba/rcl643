@@ -27,11 +27,11 @@ import Branch528 from "./pages/Branch528/Branch528.jsx";
 function App() {
   return (
     <div className="app">
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Navbar />
         <ScrollToTop />
         <Routes>
-          <Route path="/rcl643" element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/branch-info" element={<BranchInfo />} />
           <Route path="/cadets" element={<Cadets />} />
           <Route path="/contact" element={<Contact />} />
