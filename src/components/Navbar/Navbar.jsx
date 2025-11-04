@@ -17,7 +17,7 @@ function Navbar() {
   );
   return (
     <header className="navbar">
-      <NavLink to="/">
+      <NavLink to="/rcl643">
         <img
           src={logo}
           className="navbar__logo"
