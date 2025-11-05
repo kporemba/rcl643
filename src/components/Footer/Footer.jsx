@@ -61,7 +61,7 @@ function footer() {
           </p>
         </div>
         <div className="footer__group">
-          <h3 className="footer__subtitle"> National Headquaters</h3>
+          <h3 className="footer__subtitle"> National Headquarters</h3>
           <p className="homepage__text">
             <strong>Toll Free:</strong> 1-888-556-6222
           </p>

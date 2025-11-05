@@ -63,7 +63,7 @@ function Contact() {
           </p>
         </div>
         <div className="contact__group">
-          <h2 className="contact__subtitle"> National Headquaters</h2>
+          <h2 className="contact__subtitle"> National Headquarters</h2>
           <p className="homepage__text">
             <strong>Toll Free:</strong> 1-888-556-6222
           </p>

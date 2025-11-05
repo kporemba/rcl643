@@ -23,8 +23,10 @@ import Branch217 from "./pages/Branch217/Branch217.jsx";
 import Branch266 from "./pages/Branch266/Branch266.jsx";
 import Branch286 from "./pages/Branch286/Branch286.jsx";
 import Branch528 from "./pages/Branch528/Branch528.jsx";
+import { useState } from "react";
 
 function App() {
+  const [hideFooter, setHideFooter] = useState(false);
   return (
     <div className="app">
       <BrowserRouter>
@@ -39,7 +41,10 @@ function App() {
           <Route path="/history/streight" element={<Streight />} />
           <Route path="/history" element={<History />} />
           <Route path="/gallery" element={<PhotoGallery />} />
-          <Route path="/events" element={<Events />} />
+          <Route
+            path="/events"
+            element={<Events setHideFooter={setHideFooter} />}
+          />
           <Route path="/event/:id" element={<PhotoTemplate />} />
           <Route path="/veterans" element={<Veterans />} />
           <Route path="/history/branch-summary" element={<BranchHistory />} />
@@ -52,7 +57,7 @@ function App() {
           <Route path="/history/branch286" element={<Branch286 />} />
           <Route path="/history/branch528" element={<Branch528 />} />
         </Routes>
-        {window.location.pathname !== "/events" && <Footer />}
+        {!hideFooter && <Footer />}
       </BrowserRouter>
     </div>
   );

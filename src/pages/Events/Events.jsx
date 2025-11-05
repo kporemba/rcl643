@@ -3,11 +3,20 @@ import { NavLink } from "react-router";
 import Event from "../../components/Event/Event";
 import allEvents from "./events.json";
 import { sortEvents } from "./utils";
+import { useEffect } from "react";
 
 const USE_FB_EVENTS = true;
 
-function Events() {
+function Events(props) {
+  const { setHideFooter } = props;
   const { currentEvents, pastEvents } = sortEvents();
+
+  useEffect(() => {
+    setHideFooter(true);
+    return () => {
+      setHideFooter(false);
+    };
+  }, []);
   if (USE_FB_EVENTS) {
     return (
       <iframe
