@@ -40,7 +40,7 @@ function Veterans() {
           https://legion.ca/support-for-veterans
         </a>{" "}
         or reaching out to First Vice President Bill Law{" "}
-        <a href="mailto:w.j.lawerogers.com"> w.j.lawerogers.com</a>
+        <a href="mailto:w.j.law@rogers.com"> w.j.law@rogers.com</a>
       </p>
 
       <ImageList

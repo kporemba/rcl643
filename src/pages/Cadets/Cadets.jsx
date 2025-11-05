@@ -60,7 +60,7 @@ function Cadets() {
             </p>
           </div>
           <a href="https://www.facebook.com/75torontoscottish/" target="_blank">
-            <img src={mimico} className="cadets__logo" />
+            <img src={scottish} className="cadets__logo" />
           </a>
         </div>
         <div className="cadets__group">
@@ -79,7 +79,7 @@ function Cadets() {
             </p>
           </div>
           <a href="https://www.142sqn.ca/" target="_blank">
-            <img src={scottish} className="cadets__logo" />
+            <img src={mimico} className="cadets__logo" />
           </a>
         </div>
         <div className="cadets__group">

@@ -64,13 +64,23 @@ function Homepage() {
               </a>
             </p>
             <p className="homepage__text">
-              <strong>Facebook: </strong>
+              <strong>Members Facebook Group: </strong>
               <a
                 href="https://www.facebook.com/groups/1860547480892497"
                 target="_blank"
                 className="contact__link"
               >
-                https://facebook.com/groups/rcl643
+                https://www.facebook.com/share/g/1A1bs4uA1P/
+              </a>
+            </p>
+            <p className="homepage__text">
+              <strong>Community Facebook Group: </strong>
+              <a
+                href="https://www.facebook.com/groups/1227586192155005"
+                target="_blank"
+                className="contact__link"
+              >
+                https://www.facebook.com/share/g/1Ch6RgTu2V/
               </a>
             </p>
           </div>
