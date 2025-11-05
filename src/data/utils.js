@@ -1,3 +1,3 @@
 export function getImageURL(event) {
-  return "/rcl643/assets/events/" + event.imageId + ".jpg";
+  return "/assets/events/" + event.imageId + ".jpg";
 }

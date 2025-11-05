@@ -27,7 +27,7 @@ import Branch528 from "./pages/Branch528/Branch528.jsx";
 function App() {
   return (
     <div className="app">
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter>
         <Navbar />
         <ScrollToTop />
         <Routes>
