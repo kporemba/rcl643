@@ -4,6 +4,7 @@
 .event {
   display: flex;
   flex-direction: column;
+  align-items: center;
   &__subtitle {
     @include subtitle;
   }
