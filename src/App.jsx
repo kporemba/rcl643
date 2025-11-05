@@ -52,7 +52,7 @@ function App() {
           <Route path="/history/branch286" element={<Branch286 />} />
           <Route path="/history/branch528" element={<Branch528 />} />
         </Routes>
-        <Footer />
+        {window.location.pathname !== "/events" && <Footer />}
       </BrowserRouter>
     </div>
   );

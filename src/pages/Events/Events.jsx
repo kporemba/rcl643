@@ -4,8 +4,19 @@ import Event from "../../components/Event/Event";
 import allEvents from "./events.json";
 import { sortEvents } from "./utils";
 
+const USE_FB_EVENTS = true;
+
 function Events() {
   const { currentEvents, pastEvents } = sortEvents();
+  if (USE_FB_EVENTS) {
+    return (
+      <iframe
+        src="https://widgets.sociablekit.com/facebook-group-posts/iframe/25618536"
+        frameborder="0"
+        className="events__iframe"
+      ></iframe>
+    );
+  }
   return (
     <div className="events">
       {!!currentEvents.length && (
