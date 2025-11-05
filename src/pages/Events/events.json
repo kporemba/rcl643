@@ -1,6 +1,12 @@
 {
   "events": [
     {
+      "title": "Christmas Bazaar",
+      "description": "Visit the Christmas Bazaar at Royal Canadian Legion Branch #643, 110 Jutland Road, Etobicoke on Saturday November 29th, 2025 from 9am-2pm. Baked Goods, Jewellery, Books, Previously Loved Treasures, and More! Organized by the Branch #643 Ladies Auxiliary.",
+      "imageId": "christmas",
+      "endDate": "2025-11-29"
+    },
+    {
       "title": "Friday Night Karaoke",
       "description": "Come out and enjoy a fun night of Karaoke at Royal Canadian Legion Branch #643, 110 Jutland Road, Etobicoke. Fridays 7pm to 11pm. October 03, 10, 17, 24, and 31 and November 07, 14, 21, and 28. Enjoy dinner before the show - kitchen open 1pm to 7pm.",
       "imageId": "karaoke",
